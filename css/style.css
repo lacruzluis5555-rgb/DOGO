@@ -1,0 +1,510 @@
+/* ==========================================================
+   ESTILOS GENERALES Y RESETS
+   ========================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #F8FAFC;
+  color: #1E293B;
+  line-height: 1.6;
+}
+
+main {
+  min-height: 80vh;
+}
+
+/* ==========================================================
+   HEADER / BARRA DE NAVEGACIÓN (NAVBAR)
+   ========================================================== */
+.navbar {
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo img {
+  height: 45px;
+  width: auto;
+  display: block;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #1E293B;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: #F98C30;
+}
+
+/* ==========================================================
+   SECCIÓN HERO / INICIO
+   ========================================================== */
+.hero {
+  background: linear-gradient(135deg, #1E3A8A 0%, #1e40af 100%);
+  color: #FFFFFF;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero .badge {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+/* ==========================================================
+   SECCIONES Y MÓDULOS DE CONTENIDO
+   ========================================================== */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.section h1 {
+  color: #1E3A8A;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-text {
+  text-align: center;
+  color: #1E293B;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.05rem;
+}
+
+/* ==========================================================
+   TARJETAS (CARDS)
+   ========================================================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  border-top: 4px solid #10B981;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  color: #1E3A8A;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  color: #F98C30;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.card p {
+  color: #1E293B;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+/* ==========================================================
+   CAJAS INFORMATIVAS (INFO-BOX)
+   ========================================================== */
+.info-box {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border-left: 5px solid #1E3A8A;
+}
+
+.info-box h2 {
+  color: #1E3A8A;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.info-box p {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+/* ==========================================================
+   BOTONES
+   ========================================================== */
+.btn {
+  display: inline-block;
+  background-color: #F98C30;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #e07b22;
+}
+
+.btn.whatsapp {
+  background-color: #10B981;
+}
+
+.btn.whatsapp:hover {
+  background-color: #0d9668;
+}
+
+/* ==========================================================
+   FORMULARIOS, VALIDACIONES Y CONTACTO
+   ========================================================== */
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact-info {
+  background-color: #FFFFFF;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border-top: 4px solid #1E3A8A;
+}
+
+.contact-info h2 {
+  color: #1E3A8A;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.contact-form {
+  background-color: #FFFFFF;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border-top: 4px solid #F98C30;
+}
+
+.contact-form h2 {
+  color: #1E3A8A;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1E293B;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  background-color: #F8FAFC;
+  color: #1E293B;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1E3A8A;
+  background-color: #FFFFFF;
+}
+
+/* Validaciones y Mensajes de Estado (Login / Formulario) */
+#mensajeEstado {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.error-msg, 
+#errorLogin {
+  color: #DC2626 !important;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   QUIZ DIAGNÓSTICO
+   ========================================================== */
+.quiz-container {
+  max-width: 650px;
+  margin: 3rem auto;
+  background-color: #FFFFFF;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  border-top: 5px solid #F98C30;
+}
+
+.quiz-container h1 {
+  color: #1E3A8A;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.quiz-intro {
+  text-align: center;
+  color: #1E293B;
+  margin-bottom: 25px;
+}
+
+.numero-paso {
+  color: #10B981;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.quiz-step h2 {
+  color: #1E3A8A;
+  margin-bottom: 20px;
+}
+
+/* Solución para que el botón "Continuar" del quiz coja bien el diseño y no se amontone */
+.quiz-step button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #F98C30;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-step button:hover {
+  background-color: #e07b22;
+}
+
+.oculto {
+  display: none !important;
+}
+
+.resultado-datos {
+  background-color: #F8FAFC;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border: 1px solid #E2E8F0;
+}
+
+.plan-recomendado {
+  background-color: rgba(16, 185, 129, 0.08);
+  border: 2px solid #10B981;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.plan-recomendado h2 {
+  color: #10B981;
+  margin-bottom: 10px;
+}
+
+.plan-recomendado h3 {
+  color: #F98C30;
+  font-size: 1.6rem;
+  margin: 10px 0;
+}
+
+/* ==========================================================
+   TABLAS (FINANZAS / PANEL DE CONTROL)
+   ========================================================== */
+.table-container {
+  overflow-x: auto;
+  margin-top: 15px;
+}
+
+table,
+.tabla-dogo {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #1E3A8A;
+  color: #FFFFFF;
+  text-align: left;
+  padding: 12px 15px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #E2E8F0;
+  color: #1E293B;
+  font-size: 14px;
+}
+
+tr:nth-child(even) {
+  background-color: #F8FAFC;
+}
+
+tr:hover {
+  background-color: rgba(249, 140, 48, 0.05);
+}
+
+/* ==========================================================
+   FOOTER / PIE DE PÁGINA
+   ========================================================== */
+footer {
+  background-color: #1E3A8A;
+  color: #FFFFFF;
+  margin-top: 4rem;
+  padding-top: 3rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-col h4 {
+  color: #F98C30;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, color 0.3s ease;
+  font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+  opacity: 1;
+  color: #F98C30;
+}
+
+.footer-col p {
+  opacity: 0.85;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.footer-logo img {
+  height: 40px;
+  width: auto;
+  margin-bottom: 12px;
+}
+
+.footer-bottom {
+  background-color: #172a60;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 13px;
+  opacity: 0.9;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

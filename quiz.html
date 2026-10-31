@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DOGO - Quiz Diagnóstico</title>
+
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
+
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+  <img src="img/logo.png" alt="Logo DOGO">
+</div>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="contacto.html">Contacto</a>
+
+</nav>
+
+</header>
+
+<main>
+
+
+<section class="quiz-container">
+
+    <h1>Diagnóstico DOGO</h1>
+
+    <p class="quiz-intro">
+        Cuéntanos sobre tu perro y DOGO recomendará
+        el servicio más adecuado para sus necesidades.
+    </p>
+
+    <!-- ETAPA 1 -->
+    <div id="step1" class="quiz-step">
+    <p class="numero-paso">Paso 1 de 3</p>
+    <h2>Tus Datos y los de tu Perro</h2>
+
+    <label for="nombreClienteQuiz">Tu Nombre</label>
+    <input type="text" id="nombreClienteQuiz" placeholder="Ejemplo: Carlos Pérez">
+
+    <label for="telefonoClienteQuiz">Teléfono de Contacto</label>
+    <input type="tel" id="telefonoClienteQuiz" placeholder="Ejemplo: 948911189" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; box-sizing: border-box;">
+
+    <label for="nombrePerro">Nombre del perro</label>
+    <input type="text" id="nombrePerro" placeholder="Ejemplo: Rocco">
+
+    <label for="tipoPerro">Tipo o raza</label>
+    <select id="tipoPerro" onchange="mostrarOtroTipo()">
+        <option value="">Selecciona una opción</option>
+        <option value="Labrador">Labrador</option>
+        <option value="Golden Retriever">Golden Retriever</option>
+        <option value="Pastor Alemán">Pastor Alemán</option>
+        <option value="Poodle">Poodle</option>
+        <option value="Bulldog">Bulldog</option>
+        <option value="Chihuahua">Chihuahua</option>
+        <option value="Mestizo">Mestizo</option>
+        <option value="Otro">Otro</option>
+    </select>
+
+    <div id="otroTipoContainer" class="oculto">
+        <label for="otroTipo">Escribe el tipo de perro</label>
+        <input type="text" id="otroTipo" placeholder="Ejemplo: Husky">
+    </div>
+
+    <label for="edadPerro">Edad</label>
+    <select id="edadPerro">
+        <option value="">Selecciona la edad</option>
+        <option value="Cachorro">Cachorro - Menos de 1 año</option>
+        <option value="Joven">Joven - 1 a 3 años</option>
+        <option value="Adulto">Adulto - 4 a 7 años</option>
+        <option value="Senior">Senior - 8 años o más</option>
+    </select>
+
+    <button onclick="guardarPaso1()">Continuar</button>
+    </div>
+
+    <!-- ETAPA 2 -->
+
+    <div id="step2" class="quiz-step oculto">
+
+        <p class="numero-paso">
+            Paso 2 de 3
+        </p>
+
+        <h2>Características y necesidades</h2>
+
+        <label>
+            Tamaño de tu perro
+        </label>
+
+        <select id="tamanoPerro">
+
+            <option value="">
+                Selecciona el tamaño
+            </option>
+
+            <option value="Pequeño">
+                Pequeño
+            </option>
+
+            <option value="Mediano">
+                Mediano
+            </option>
+
+            <option value="Grande">
+                Grande
+            </option>
+
+        </select>
+
+        <label>
+            Nivel de energía
+        </label>
+
+        <select id="energiaPerro">
+
+            <option value="">
+                Selecciona el nivel
+            </option>
+
+            <option value="Bajo">
+                Bajo
+            </option>
+
+            <option value="Medio">
+                Medio
+            </option>
+
+            <option value="Alto">
+                Alto
+            </option>
+
+        </select>
+
+        <label>
+            Necesidad principal
+        </label>
+
+        <select id="objetivoPerro">
+            <option value="">Selecciona una opción</option>
+            <option value="Actividad">Paseos y actividad física</option>
+            <option value="Conducta">Entrenamiento y conducta</option>
+            <option value="Higiene">Baño, peluquería e higiene</option>
+            <option value="Viaje">Alojamiento nocturno / Viaje del dueño</option>
+            <option value="Cuidado">Cuidado de día y compañía</option>
+            <option value="General">Bienestar general / Senior</option>
+        </select>
+
+        <button onclick="mostrarResultado()">
+            Ver diagnóstico
+        </button>
+
+    </div>
+
+    <!-- ETAPA 3 -->
+
+    <div id="resultado" class="quiz-result oculto">
+
+        <p class="numero-paso">
+            Paso 3 de 3
+        </p>
+
+        <h2>Resultado del diagnóstico</h2>
+
+        <p id="mensajeResultado"></p>
+
+        <div class="resultado-datos">
+
+            <p>
+                <strong>Nombre:</strong>
+                <span id="resultadoNombre"></span>
+            </p>
+
+            <p>
+                <strong>Tipo:</strong>
+                <span id="resultadoTipo"></span>
+            </p>
+
+            <p>
+                <strong>Edad:</strong>
+                <span id="resultadoEdad"></span>
+            </p>
+
+            <p>
+                <strong>Tamaño:</strong>
+                <span id="resultadoTamano"></span>
+            </p>
+
+            <p>
+                <strong>Energía:</strong>
+                <span id="resultadoEnergia"></span>
+            </p>
+
+            <p>
+                <strong>Necesidad:</strong>
+                <span id="resultadoObjetivo"></span>
+            </p>
+
+        </div>
+
+        <div class="plan-recomendado">
+
+            <h2 id="nombrePlan"></h2>
+
+            <p id="descripcionPlan"></p>
+
+            <h3 id="precioPlan"></h3>
+
+            <p id="beneficiosPlan"></p>
+
+        </div>
+
+        <a
+            id="whatsappButton"
+            class="btn whatsapp"
+            href="#"
+            target="_blank"
+        >
+            Consultar por WhatsApp
+        </a>
+
+        <br><br>
+
+        <button onclick="location.reload()" class="btn" style="background-color: #F98C30; width: 100%; margin-top: 15px;">
+            Realizar otro diagnóstico
+        </button>
+
+    </div>
+
+</section>
+
+
+</main>
+
+<footer>
+    <div class="footer-container">
+        
+        <div class="footer-col footer-logo">
+            <img src="img/logo.png" alt="Logo DOGO">
+            <p>Bienestar, actividad y cuidado personalizado para tu perro.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Servicios</h4>
+            <ul>
+                <li><a href="servicios.html">DOGO Walk</a></li>
+                <li><a href="servicios.html">DOGO Training</a></li>
+                <li><a href="servicios.html">DOGO Daycare</a></li>
+                <li><a href="servicios.html">DOGO Grooming</a></li>
+                <li><a href="servicios.html">DOGO Puppy Pack</a></li>
+                <li><a href="servicios.html">DOGO Physio / Senior</a></li>
+                <li><a href="servicios.html">DOGO Hotel</a></li>
+                <li><a href="servicios.html">DOGO Tag</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>📍 Santiago, Chile</p>
+            <p>📧 dogomacota@gmail.com</p>
+            <p>💬 Atención vía WhatsApp</p>
+        </div>
+
+    </div>
+
+    
+    <div class="footer-bottom">
+        <p>© 2026 DOGO Pet Services. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOGO - Panel de Administración</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body onload="cargarPanelAdmin()">
+
+<header class="navbar">
+    <div class="logo">
+        <img src="img/logo.png" alt="Logo DOGO">
+    </div>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="#" onclick="cerrarSesionAdmin()" class="btn" style="background-color: #DC2626; padding: 6px 15px; font-size: 13px;">Cerrar Sesión</a>
+    </nav>
+</header>
+
+<main>
+    <section class="section">
+        <h1>Panel de Administración DOGO</h1>
+        <p class="section-text">
+            Bienvenido, <strong id="nombreAdminPanel">Administrador</strong>. Desde aquí puedes gestionar las órdenes de servicios contratadas por los clientes.
+        </p>
+
+        <!-- TABLA: GESTIÓN DE SERVICIOS -->
+        <div class="info-box" style="margin-bottom: 30px;">
+            <h2>📋 Solicitudes de Servicios Contratados</h2>
+            <div class="table-container">
+                <table class="tabla-dogo">
+                    <thead>
+                        <tr>
+                            <th>ID Orden</th>
+                            <th>Mascota / Cliente</th>
+                            <th>Servicio</th>
+                            <th>Monto</th>
+                            <th>Fecha</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTablaAdmin">
+                        <!-- Inyección dinámica desde JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-bottom">
+        <p>© 2026 DOGO Pet Services. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>

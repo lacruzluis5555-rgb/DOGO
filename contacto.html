@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOGO - Contacto</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <img src="img/logo.png" alt="Logo DOGO">
+    </div>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="section">
+
+        <h1>Contacto y Acceso DOGO</h1>
+
+        <p class="section-text">
+            ¿Tienes alguna pregunta o deseas acceder a tu panel de cliente? Escríbenos o inicia sesión a continuación.
+        </p>
+
+
+        <div class="contact-container">
+
+            
+            <div class="contact-info">
+
+                <h2>Información de Contacto</h2>
+
+                <p>
+                    📍 <strong>Dirección:</strong> Cardenal Juan Francisco Fresno, Cerrillos, Santiago, Chile
+                </p>
+
+                <p>
+                    📞 <strong>Teléfono / WhatsApp:</strong> +56 9 4891 1189
+                </p>
+
+                <p>
+                    📧 <strong>Correo:</strong> dogomacota@gmail.com
+                </p>
+
+                <p>
+                    🐶 <strong>Atención:</strong> Lunes a Sábado de 09:00 a 19:00 hrs.
+                </p>
+
+                <p>
+                    💬 <strong>Soporte:</strong> Atención mediante WhatsApp Business activo.
+                </p>
+
+            </div>
+
+
+            <div style="display: flex; flex-direction: column; gap: 30px; width: 100%;">
+
+                
+                <div class="contact-form">
+                    <h2>Envíanos un mensaje</h2>
+
+                    <form id="formContacto" onsubmit="enviarFormulario(event)">
+                        <label>Nombre</label>
+                        <input type="text" id="nombre" name="user_name" placeholder="Escribe tu nombre" required>
+
+                        <label>Correo</label>
+                        <input type="email" id="correo" name="user_email" placeholder="ejemplo@gmail.com" required>
+
+                        <label>Nombre de tu perro</label>
+                        <input type="text" id="mascota" name="mascota" placeholder="Ejemplo: Rocco" required>
+
+                        <label>Mensaje</label>
+                        <textarea id="mensaje" name="message" rows="4" placeholder="Cuéntanos qué necesitas..." required></textarea>
+
+                        
+                        <p id="mensajeEstado" style="margin-top: 10px; font-weight: bold;"></p>
+
+                        <button type="submit" class="btn" style="margin-top: 10px;">
+                            Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+
+
+               <!-- FORMULARIO DE LOGIN ADMINISTRADOR -->
+                <div class="contact-form" style="background-color: #f9f9f9; border-top: 4px solid #F98C30;">
+                    <h2>Login Administrador</h2>
+                    <p style="font-size: 14px; color: #666; margin-bottom: 15px;">
+                        Acceso exclusivo para administradores de DOGO.
+                    </p>
+
+                    <form id="formLogin" onsubmit="procesarLoginAdmin(event)">
+                        <label>Usuario</label>
+                        <input type="text" id="loginUser" placeholder="Escribe tu usuario" required>
+
+                        <label>Contraseña</label>
+                        <input type="password" id="loginPassword" placeholder="********" required>
+
+                        <!-- Mensaje de error de login -->
+                        <p id="errorLogin" class="error-msg"></p>
+
+                        <button type="submit" class="btn" style="margin-top: 10px; width: 100%;">
+                            Ingresar como Admin
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        
+        <div class="footer-col footer-logo">
+            <img src="img/logo.png" alt="Logo DOGO">
+            <p>Bienestar, actividad y cuidado personalizado para tu perro.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Servicios</h4>
+            <ul>
+                <li><a href="servicios.html">DOGO Walk</a></li>
+                <li><a href="servicios.html">DOGO Training</a></li>
+                <li><a href="servicios.html">DOGO Daycare</a></li>
+                <li><a href="servicios.html">DOGO Grooming</a></li>
+                <li><a href="servicios.html">DOGO Puppy Pack</a></li>
+                <li><a href="servicios.html">DOGO Physio / Senior</a></li>
+                <li><a href="servicios.html">DOGO Hotel</a></li>
+                <li><a href="servicios.html">DOGO Tag</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>📍 Santiago, Chile</p>
+            <p>📧 dogomacota@gmail.com</p>
+            <p>💬 Atención vía WhatsApp</p>
+        </div>
+
+    </div>
+
+    
+    <div class="footer-bottom">
+        <p>© 2026 DOGO Pet Services. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>

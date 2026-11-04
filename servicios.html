@@ -2,203 +2,213 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOGO - Servicios</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>DOGO - Servicios</title>
+ <link rel="stylesheet" href="css/style.css">
+ <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
 <header class="navbar">
-    <div class="logo">
-        <img src="img/logo.png" alt="Logo DOGO">
-    </div>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html" class="active">Servicios</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="contacto.html">Contacto</a>
-
-    </nav>
+ <div class="logo">
+ <img src="img/logo.png" alt="Logo DOGO">
+ </div>
+ <nav>
+ <a href="index.html">Inicio</a>
+ <a href="servicios.html" class="active">Servicios</a>
+ <a href="nosotros.html">Nosotros</a>
+ <a href="contacto.html">Contacto</a>
+ </nav>
 </header>
 
 <main>
-    <section class="section">
-        <h1>Servicios DOGO</h1>
-        <p class="section-text">DOGO ofrece servicios orientados al bienestar, actividad y conducta de los perros.</p>
+ <section class="section">
+ <h1>Servicios DOGO</h1>
+ <p class="section-text">DOGO ofrece servicios orientados al bienestar, actividad y conducta de los perros.</p>
 
-        <div class="cards">
+ <div class="cards">
 
-            <!-- DOGO Walk -->
-            <div class="card">
-                <div class="card-icon">🦮</div>
-                <h2>DOGO Walk</h2>
-                <p>Paseos focalizados para ayudar a mantener la actividad física del perro.</p>
-                <h3>$45.000</h3>
-                <p>12 paseos al mes con reporte de conducta.</p>
-                <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
-                    <button onclick="contratarServicio('DOGO Walk', '$45.000')" class="btn" style="background-color: #27ae60;">Contratar Servicio</button>
-                    <a href="quiz.html" class="btn">Hacer diagnóstico</a>
-                </div>
-            </div>
+ <!-- DOGO Walk -->
+ <div class="card">
+ <div class="card-img-container">
+ <img src="img/servicio-walk.jpg" alt="DOGO Walk" class="card-img" onerror="this.parentNode.style.display='none'">
+ </div>
+ <h2>DOGO Walk</h2>
+ <p>Paseos focalizados para ayudar a mantener la actividad física del perro.</p>
+ <h3>$45.000</h3>
+ <p>12 paseos al mes con reporte de conducta.</p>
+ <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
+ <button onclick="contratarServicio('DOGO Walk', '$45.000')" class="btn" style="background-color: #27ae60;">Contratar Servicio</button>
+ <a href="quiz.html" class="btn">Hacer diagnóstico</a>
+ </div>
+ </div>
 
-            <!-- DOGO Training -->
-            <div class="card">
-                <div class="card-icon">🎓</div>
-                <h2>DOGO Training</h2>
-                <p>Servicio de adiestramiento enfocado en conducta y creación de buenos hábitos.</p>
-                <h3>$80.000</h3>
-                <p>4 sesiones individuales a domicilio más plan de hábitos.</p>
-                <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
-                    <button onclick="contratarServicio('DOGO Training', '$80.000')" class="btn" style="background-color: #27ae60;">Contratar Servicio</button>
-                    <a href="quiz.html" class="btn">Hacer diagnóstico</a>
-                </div>
-            </div>
+ <!-- DOGO Training -->
+ <div class="card">
+ <div class="card-img-container">
+ <img src="img/servicio-training.jpg" alt="DOGO Training" class="card-img" onerror="this.parentNode.style.display='none'">
+ </div>
+ <h2>DOGO Training</h2>
+ <p>Servicio de adiestramiento enfocado en conducta y creación de buenos hábitos.</p>
+ <h3>$80.000</h3>
+ <p>4 sesiones individuales a domicilio más plan de hábitos.</p>
+ <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
+ <button onclick="contratarServicio('DOGO Training', '$80.000')" class="btn" style="background-color: #27ae60;">Contratar Servicio</button>
+ <a href="quiz.html" class="btn">Hacer diagnóstico</a>
+ </div>
+ </div>
 
-            <!-- DOGO Daycare -->
-            <div class="card">
-                <div class="card-icon">🏡</div>
-                <h2>DOGO Daycare</h2>
-                <p>Cuidado y enriquecimiento para perros que necesitan compañía durante el día.</p>
-                <h3>$60.000</h3>
-                <p>Pack de 4 jornadas de enriquecimiento ambiental.</p>
-                <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
-                    <button onclick="contratarServicio('DOGO Daycare', '$60.000')" class="btn" style="background-color: #27ae60;">Contratar Servicio</button>
-                    <a href="quiz.html" class="btn">Hacer diagnóstico</a>
-                </div>
-            </div>
+ <!-- DOGO Daycare -->
+ <div class="card">
+ <div class="card-img-container">
+ <img src="img/servicio-daycare.jpg" alt="DOGO Daycare" class="card-img" onerror="this.parentNode.style.display='none'">
+ </div>
+ <h2>DOGO Daycare</h2>
+ <p>Cuidado y enriquecimiento para perros que necesitan compañía durante el día.</p>
+ <h3>$60.000</h3>
+ <p>Pack de 4 jornadas de enriquecimiento ambiental.</p>
+ <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
+ <button onclick="contratarServicio('DOGO Daycare', '$60.000')" class="btn" style="background-color: #27ae60;">Contratar Servicio</button>
+ <a href="quiz.html" class="btn">Hacer diagnóstico</a>
+ </div>
+ </div>
 
-            <!-- DOGO Tag -->
-            <div class="card">
-                <div class="card-icon">🏷️</div>
-                <h2>DOGO Tag</h2>
-                <p>Placa inteligente con código QR y perfil web para identificar al perro.</p>
-                <h3>$7.990</h3>
-                <p>Identificador inteligente con perfil web.</p>
-                <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
-                    <button onclick="contratarServicio('DOGO Tag', '$7.990')" class="btn" style="background-color: #27ae60;">Comprar Tag</button>
-                    <a href="contacto.html" class="btn">Consultar</a>
-                </div>
-            </div>
+ <!-- DOGO Tag -->
+ <div class="card">
+ <div class="card-img-container">
+ <img src="img/servicio-tag.jpg" alt="DOGO Tag" class="card-img" onerror="this.parentNode.style.display='none'">
+ </div>
+ <h2>DOGO Tag</h2>
+ <p>Placa inteligente con código QR y perfil web para identificar al perro.</p>
+ <h3>$7.990</h3>
+ <p>Identificador inteligente con perfil web.</p>
+ <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
+ <button onclick="contratarServicio('DOGO Tag', '$7.990')" class="btn" style="background-color: #27ae60;">Comprar Tag</button>
+ <a href="contacto.html" class="btn">Consultar</a>
+ </div>
+ </div>
 
-            <!-- DOGO Grooming -->
-            <div class="card">
-                <div class="card-icon">✂️</div>
-                <h2>DOGO Grooming</h2>
-                <p>Peluquería y baño canino urbano a domicilio con productos hipoalergénicos.</p>
-                <h3>$55.000</h3>
-                <p>Pack de 2 sesiones al mes (baño, deslanado, uñas y oídos).</p>
-                <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
-                    <button onclick="contratarServicio('DOGO Grooming', '$55.000')" class="btn" style="background-color: #27ae60;">Contratar Servicio</button>
-                    <a href="quiz.html" class="btn">Hacer diagnóstico</a>
-                </div>
-            </div>
+ <!-- DOGO Grooming -->
+ <div class="card">
+ <div class="card-img-container">
+ <img src="img/servicio-grooming.jpg" alt="DOGO Grooming" class="card-img" onerror="this.parentNode.style.display='none'">
+ </div>
+ <h2>DOGO Grooming</h2>
+ <p>Peluquería y baño canino urbano a domicilio con productos hipoalergénicos.</p>
+ <h3>$55.000</h3>
+ <p>Pack de 2 sesiones al mes (baño, deslanado, uñas y oídos).</p>
+ <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
+ <button onclick="contratarServicio('DOGO Grooming', '$55.000')" class="btn" style="background-color: #27ae60;">Contratar Servicio</button>
+ <a href="quiz.html" class="btn">Hacer diagnóstico</a>
+ </div>
+ </div>
 
-            <!-- DOGO Puppy Pack -->
-            <div class="card">
-                <div class="card-icon">🐶</div>
-                <h2>DOGO Puppy Pack</h2>
-                <p>Programa de estimulación temprana y educación básica para cachorros.</p>
-                <h3>$75.000</h3>
-                <p>3 semanas: control de mordida, habituación e higiene.</p>
-                <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
-                    <button onclick="contratarServicio('DOGO Puppy Pack', '$75.000')" class="btn" style="background-color: #27ae60;">Contratar Servicio</button>
-                    <a href="quiz.html" class="btn">Hacer diagnóstico</a>
-                </div>
-            </div>
+ <!-- DOGO Puppy Pack -->
+ <div class="card">
+ <div class="card-img-container">
+ <img src="img/servicio-puppy.jpg" alt="DOGO Puppy Pack" class="card-img" onerror="this.parentNode.style.display='none'">
+ </div>
+ <h2>DOGO Puppy Pack</h2>
+ <p>Programa de estimulación temprana y educación básica para cachorros.</p>
+ <h3>$75.000</h3>
+ <p>3 semanas: control de mordida, habituación e higiene.</p>
+ <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
+ <button onclick="contratarServicio('DOGO Puppy Pack', '$75.000')" class="btn" style="background-color: #27ae60;">Contratar Servicio</button>
+ <a href="quiz.html" class="btn">Hacer diagnóstico</a>
+ </div>
+ </div>
 
-            <!-- DOGO Senior Care / Physio -->
-            <div class="card">
-                <div class="card-icon">🩺</div>
-                <h2>DOGO Physio / Senior</h2>
-                <p>Cuidado especializado, masajes y ejercicios suaves para perros mayores.</p>
-                <h3>$65.000</h3>
-                <p>4 sesiones mensuales de movilidad y relajación a domicilio.</p>
-                <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
-                    <button onclick="contratarServicio('DOGO Physio / Senior', '$65.000')" class="btn" style="background-color: #27ae60;">Contratar Servicio</button>
-                    <a href="quiz.html" class="btn">Hacer diagnóstico</a>
-                </div>
-            </div>
+ <!-- DOGO Senior Care / Physio -->
+ <div class="card">
+ <div class="card-img-container">
+ <img src="img/servicio-senior.jpg" alt="DOGO Physio / Senior" class="card-img" onerror="this.parentNode.style.display='none'">
+ </div>
+ <h2>DOGO Physio / Senior</h2>
+ <p>Cuidado especializado, masajes y ejercicios suaves para perros mayores.</p>
+ <h3>$65.000</h3>
+ <p>4 sesiones mensuales de movilidad y relajación a domicilio.</p>
+ <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
+ <button onclick="contratarServicio('DOGO Physio / Senior', '$65.000')" class="btn" style="background-color: #27ae60;">Contratar Servicio</button>
+ <a href="quiz.html" class="btn">Hacer diagnóstico</a>
+ </div>
+ </div>
 
-            <!-- DOGO Hotel -->
-            <div class="card">
-                <div class="card-icon">🏨</div>
-                <h2>DOGO Hotel</h2>
-                <p>Alojamiento nocturno familiar y personalizado sin caniles ni encierros.</p>
-                <h3>$25.000</h3>
-                <p>Valor por noche en hogar de cuidador verificado.</p>
-                <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
-                    <button onclick="contratarServicio('DOGO Hotel', '$25.000')" class="btn" style="background-color: #27ae60;">Contratar Servicio</button>
-                    <a href="quiz.html" class="btn">Hacer diagnóstico</a>
-                </div>
-            </div>
+ <!-- DOGO Hotel -->
+ <div class="card">
+ <div class="card-img-container">
+ <img src="img/servicio-hotel.jpg" alt="DOGO Hotel" class="card-img" onerror="this.parentNode.style.display='none'">
+ </div>
+ <h2>DOGO Hotel</h2>
+ <p>Alojamiento nocturno familiar y personalizado sin caniles ni encierros.</p>
+ <h3>$25.000</h3>
+ <p>Valor por noche en hogar de cuidador verificado.</p>
+ <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 15px;">
+ <button onclick="contratarServicio('DOGO Hotel', '$25.000')" class="btn" style="background-color: #27ae60;">Contratar Servicio</button>
+ <a href="quiz.html" class="btn">Hacer diagnóstico</a>
+ </div>
+ </div>
 
-        </div>
-    </section>
+ </div>
+ </section>
 </main>
 
 <footer>
-    <div class="footer-container">
-        
-        <div class="footer-col footer-logo">
-            <img src="img/logo.png" alt="Logo DOGO">
-            <p>Bienestar, actividad y cuidado personalizado para tu perro.</p>
-        </div>
+ <div class="footer-container">
+ <div class="footer-col footer-logo">
+ <img src="img/logo.png" alt="Logo DOGO">
+ <p>Bienestar, actividad y cuidado personalizado para tu perro.</p>
+ </div>
 
-        <div class="footer-col">
-            <h4>Navegación</h4>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+ <div class="footer-col">
+ <h4>Navegación</h4>
+ <ul>
+ <li><a href="index.html">Inicio</a></li>
+ <li><a href="servicios.html">Servicios</a></li>
+ <li><a href="nosotros.html">Nosotros</a></li>
+ <li><a href="contacto.html">Contacto</a></li>
+ </ul>
+ </div>
 
-            </ul>
-        </div>
+ <div class="footer-col">
+ <h4>Servicios</h4>
+ <ul>
+ <li><a href="servicios.html">DOGO Walk</a></li>
+ <li><a href="servicios.html">DOGO Training</a></li>
+ <li><a href="servicios.html">DOGO Daycare</a></li>
+ <li><a href="servicios.html">DOGO Grooming</a></li>
+ <li><a href="servicios.html">DOGO Puppy Pack</a></li>
+ <li><a href="servicios.html">DOGO Physio / Senior</a></li>
+ <li><a href="servicios.html">DOGO Hotel</a></li>
+ <li><a href="servicios.html">DOGO Tag</a></li>
+ </ul>
+ </div>
 
-        <div class="footer-col">
-            <h4>Servicios</h4>
-            <ul>
-                <li><a href="servicios.html">DOGO Walk</a></li>
-                <li><a href="servicios.html">DOGO Training</a></li>
-                <li><a href="servicios.html">DOGO Daycare</a></li>
-                <li><a href="servicios.html">DOGO Grooming</a></li>
-                <li><a href="servicios.html">DOGO Puppy Pack</a></li>
-                <li><a href="servicios.html">DOGO Physio / Senior</a></li>
-                <li><a href="servicios.html">DOGO Hotel</a></li>
-                <li><a href="servicios.html">DOGO Tag</a></li>
-            </ul>
-        </div>
+ <div class="footer-col">
+ <h4>Contacto</h4>
+ <p>📍 Cardenal Juan Francisco Fresno, Cerrillos, Santiago</p>
+ <p>📧 dogomacota@gmail.com</p>
+ <p>💬 Atención vía WhatsApp Business</p>
+ <p>🕒 Lun - Sáb: 09:00 - 19:00 hrs.</p>
+ 
+ <div style="margin-top: 10px; border-radius: 6px; overflow: hidden;">
+ <iframe 
+ title="Mapa Footer DOGO"
+ width="100%" 
+ height="110" 
+ style="border:0; display:block;" 
+ allowfullscreen="" 
+ loading="lazy" 
+ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.654578125432!2d-70.715!3d-33.515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c26b00000001%3A0x0!2sCardenal%20Juan%20Francisco%20Fresno%2C%20Cerrillos%2C%20Santiago%2C%20Chile!5e0!3m2!1ses!2scl!4v1710000000000">
+ </iframe>
+ </div>
+ </div>
+ </div>
 
-        <div class="footer-col">
-            <h4>Contacto</h4>
-            <p>📍 Cardenal Juan Francisco Fresno 420, Cerrillos, Santiago</p>
-            <p>📧 dogomacota@gmail.com</p>
-            <p>💬 Atención vía WhatsApp Business</p>
-            <p>🕒 Lun - Sáb: 09:00 - 19:00 hrs.</p>
-            
-            <!-- Mini mapa integrado en footer -->
-            <div style="margin-top: 10px; border-radius: 6px; overflow: hidden;">
-                <iframe 
-                title="Mapa Footer DOGO"
-                width="100%" 
-                height="110" 
-                style="border:0; display:block;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.654578125432!2d-70.715!3d-33.515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c26b00000001%3A0x0!2sCardenal%20Juan%20Francisco%20Fresno%2C%20Cerrillos%2C%20Santiago%2C%20Chile!5e0!3m2!1ses!2scl!4v1710000000000">
-                </iframe>
-            </div>
-        </div>
-
-    </div>
-
-    
-    <div class="footer-bottom">
-        <p>© 2026 DOGO Pet Services. Todos los derechos reservados.</p>
-    </div>
+ <div class="footer-bottom">
+ <p>© 2026 DOGO Pet Services. Todos los derechos reservados.</p>
+ </div>
 </footer>
 
 </body>
